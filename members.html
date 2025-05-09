@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members Management</title>
+    <link rel="stylesheet" href="index.css"> <!-- Common Styles -->
+    <link rel="stylesheet" href="dashboard.css"> <!-- Sidebar Styling -->
+    <link rel="stylesheet" href="members.css"> <!-- Members Page Styling -->
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+ <!-- Hamburger Menu Icon -->
+ <div class="hamburger-menu" id="hamburger-menu">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+</div>
+
+<!-- Sidebar Menu -->
+<div class="sidebar" id="sidebar">
+    <h2> 📑</h2>
+    <ul>
+        <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+        <li><a href="books.html" class="active"><i class="fas fa-book"></i> Books</a></li>
+        <li><a href="members.html" class="active"><i class="fas fa-users"></i> Members</a></li>
+        <li><a href="transactions.html" class="active"><i class="fas fa-exchange-alt"></i> Transactions</a></li>
+        <li><a href="fines.html" class="active"><i class="fas fa-money-bill-wave"></i> Fines</a></li>
+        <li><a href="reports.html" class="active"><i class="fas fa-chart-line"></i> Reports</a></li>
+        <li><a href="settings.html" class="active"><i class="fas fa-cogs"></i> Settings</a></li>
+    </ul>
+    <!-- Logout Button -->
+    <div class="logout-section">
+        <a href="loginform.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+</div>
+<!-- Overlay for Sidebar -->
+<div class="overlay" id="overlay"></div>
+
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>Members Management</h1>
+    <p>Manage all members in the library.</p>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search members...">
+        <button id="search-btn"><i class="fas fa-search"></i></button>
+    </div>
+
+    <!-- Members Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="members-table-body">
+            <!-- Members will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <!-- Add Member Button -->
+    <button id="add-member-btn"><i class="fas fa-user-plus"></i> Add Member</button>
+</div>
+
+<!-- Add Member Modal -->
+<div id="addMemberModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Add New Member</h2>
+        <form id="addMemberForm">
+            <label for="member-name">Name:</label>
+            <input type="text" id="member-name" required>
+
+            <label for="member-email">Email:</label>
+            <input type="email" id="member-email" required>
+
+            <label for="member-phone">Phone Number:</label>
+            <input type="text" id="member-phone" required pattern="\d{10}" title="Enter a valid 10-digit phone number">
+
+            <button type="submit">Add Member</button>
+        </form>
+    </div>
+</div>
+
+    <script src="index.js"></script>
+    <script src="members.js"></script>
+</body>
+</html>

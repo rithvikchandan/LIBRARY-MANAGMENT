@@ -1,0 +1,87 @@
+/* Reset margins, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(-45deg, #e0e3eb, #ccd1dc, #b8c2cc, #a3b4c7);
+    color: #333;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+/* Center Align Heading */
+.main-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.main-content h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.main-content p {
+    text-align: center;
+    color: #666;
+    font-size: 16px;
+}
+
+/* Settings Form */
+form {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: linear-gradient(-45deg, #e0e3eb, #ccd1dc, #b8c2cc, #a3b4c7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button {
+    padding: 12px;
+    background: #2a5298;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #2a5298;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+    }
+}
+.main-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px; /* Reduce this value */
+}
