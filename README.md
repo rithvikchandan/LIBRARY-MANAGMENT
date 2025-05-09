@@ -104,7 +104,7 @@ node server.js
 
 > Add your screenshots here if available
 > Example:
-> ![Dashboard Preview](./screenshots/dashboard.png)
+> [![Dashboard Preview](./screenshots/dashboard.png)](https://github.com/rithvikchandan/LIBRARY-MANAGMENT/blob/main/Screenshot%202025-05-09%20091248.png)
 
 ---
 
